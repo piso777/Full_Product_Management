@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/Css/bootstrap.min.css" />
+    <link rel="stylesheet" href="/Css/style.css" />
+    <title>Product Management System</title>
+  </head>
+  <body class="bg-info">
+    <div class="container formContainer py-5">
+      <div class="container">
+        <h1 class="text-center py-4">Product Management System</h1>
+      </div>
+      <div class="content">
+        <label for="productName">Product Name :</label>
+        <input class="form-control mb-3" type="text" id="productName" />
+        <label for="productPrice ">Product Price :</label>
+        <input class="form-control mb-3" type="text" id="productPrice" />
+        <label for="productDescription">Product Description :</label>
+        <input class="form-control mb-3" type="text" id="productDescription" />
+        <label for="productCategory">Product Category :</label>
+        <input class="form-control mb-3" type="text" id="productCategory" />
+        <div class="btn d-flex justify-content-center mt-3">
+          <button
+            class="btn btn-outline-secondary me-3"
+            type="button"
+            id="addBtn"
+            onclick="productAction();"
+          >
+            Add Product
+          </button>
+          <button
+            class="btn btn-outline-dark ms-3"
+            type="button"
+            onclick="clearProduct()"
+          >
+            Reset
+          </button>
+        </div>
+      </div>
+      <div class="search my-3 mx-auto w-75">
+        <input
+          class="form-control"
+          type="text"
+          id="inputSearch"
+          placeholder="Search"
+          oninput="searchProduct(this.value)"
+        />
+      </div>
+      <div class="deleteAll d-flex justify-content-end">
+        <button class="btn btn-dark" type="button" onclick="deleteAll()">
+          Delete All
+        </button>
+      </div>
+      <div class="tableData py-5">
+        <table class="table table-striped text-center">
+          <thead>
+            <th>Index</th>
+            <th>Name</th>
+            <th>Price</th>
+            <th>Desc</th>
+            <th>Cat</th>
+            <th>Action</th>
+          </thead>
+          <tbody id="tableBody"></tbody>
+          <tfoot></tfoot>
+        </table>
+      </div>
+    </div>
+    <script src="/Js/bootstrap.bundle.min.js"></script>
+    <script src="/Js/script.js"></script>
+  </body>
+</html>
